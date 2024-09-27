@@ -1,0 +1,21 @@
+The Puzzle Slider Game is structured to four modules to facilitate gameplay, 
+user interaction, and score management.
+
+The GameBoard module is responsible for the core mechanics. 
+It initializes the puzzle board, and all puzzles can be loaded from .puz files, 
+which contain metadata and logic to shuffle tiles, handle tile swapping, check for move validity, 
+completion status, and whether the player has failed the game based on the move limit.
+
+The ScreenManager class handles all screen elements of the game. 
+It displays the game's splash screen, several setup buttons, game board, status updates, user inputs 
+for their name, number of moves, and puzzle selection. Game completion or failure determines if images 
+are displayed.
+
+The Leaderboard class deals with tracking and displaying player scores. 
+It reads from and writes to a leaderboard file, keeping a record of the lowest number of moves 
+used to solve puzzles. If the leaderboard file is missing, the class is designed to log an error 
+and create a new file as necessary.
+
+The main game file puzzle_game.py brings together all these components, 
+it initializes the game, loads the first puzzle, and handles the main game loop.
+
